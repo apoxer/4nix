@@ -53,6 +53,7 @@
     brave
     wl-clipboard
     home-manager
+    nautilus
   ];
 
 programs = {
