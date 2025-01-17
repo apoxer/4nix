@@ -45,6 +45,7 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+  users.defaultUserShell = pkgs.fish;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   environment.systemPackages = with pkgs; [
@@ -61,6 +62,7 @@ programs = {
   git.enable = true;
   yazi.enable = true;
   neovim.enable = true;
+  fish.enable = true;
 };
 
 system.stateVersion = "24.11";
