@@ -52,6 +52,7 @@
     kitty
     brave
     wl-clipboard
+    home-manager
   ];
 
 programs = {
