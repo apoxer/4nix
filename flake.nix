@@ -19,23 +19,19 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
-	{  # <- # example to add the overlay to Nixpkgs:
-            nixpkgs = {
-              overlays = [
-                (final: prev: {
-                    nvchad = inputs.nvchad4nix.homeManagerModule;
-                })
-              ];
-            };
-          }
-	home-manager.nixosModules.home-manager {
-	  home-manager = {
+	      {
+          nixpkgs.overlays = [
+            (final: prev: { nvchad = inputs.nvchad4nix.homeManagerModule; })
+          ];
+        }
+        home-manager.nixosModules.home-manager {
+	        home-manager = {
             extraSpecialArgs = { inherit inputs; };
-            users.nixy = import ./home.nix;
-	    useGlobalPkgs = true;
+	          useGlobalPkgs = true;
             useUserPackages = true;
+            users.nixy = import ./home.nix;
           };
-	}
+	      }
       ];
     };
   };
