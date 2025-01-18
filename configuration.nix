@@ -3,6 +3,7 @@
 {
   imports = [ 
     ./hardware-configuration.nix
+    ./modules/stylix.nix
   ];
 
   boot.loader = {
@@ -59,17 +60,31 @@
     clipse
     fastfetch
     wl-clipboard
+    udiskie
   ];
 
   programs = {
     git.enable = true;
     neovim.enable = true;
-    fish.enable = true;
+    fish = {
+      enable = true;
+      shellInit = "
+        if uwsm check may-start
+          exec uwsm start hyprland.desktop
+        end
+        set -U fish_greeting
+        fish_config prompt choose scales
+      ";
+    };
     yazi.enable = true;
     hyprland = {
       enable = true;
       withUWSM  = true;
     };
+  };
+
+  services = {
+    udisks2.enable = true;
   };
 
   users.defaultUserShell = pkgs.fish;

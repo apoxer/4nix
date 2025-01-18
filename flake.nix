@@ -24,6 +24,7 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
+        inputs.stylix.nixosModules.stylix
 	      {
           nixpkgs.overlays = [
             inputs.hyprpanel.overlay
