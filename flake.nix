@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
 
-  outputs = { nixpkgs, ...  } @ inputs:
+  outputs = { nixpkgs, ...  }@inputs:
   {
     nixosConfigurations.nixy = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
