@@ -3,22 +3,15 @@
 {
   imports = [ 
     ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.home-manager
   ];
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users.nixy = import ./home.nix;
-  };
-
-  # Bootloader.
   boot.loader = {
     # systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
     grub = {
-     enable = true;
-     device = "nodev";
-     efiSupport = true;
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
     };
   };
 
