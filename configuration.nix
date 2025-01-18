@@ -62,11 +62,14 @@
   ];
 
   programs = {
-    hyprland.enable = true;
     git.enable = true;
     neovim.enable = true;
     fish.enable = true;
     yazi.enable = true;
+    hyprland = {
+      enable = true;
+      withUWSM  = true;
+    };
   };
 
   users.defaultUserShell = pkgs.fish;

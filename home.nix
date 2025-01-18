@@ -16,5 +16,7 @@
   imports = [
     ./modules/nvchad.nix
     inputs.nvchad4nix.homeManagerModule
+    ./modules/hyprpanel.nix
+    inputs.hyprpanel.homeManagerModules.hyprpanel
   ];
 }
