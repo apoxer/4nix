@@ -1,10 +1,15 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ 
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.home-manager
+  ];
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users.nixy = import ./home.nix;
+  };
 
   # Bootloader.
   boot.loader = {
