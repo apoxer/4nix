@@ -9,17 +9,11 @@
     file = {};
   };
   
-  programs.home-manager.enable = true;
-  # programs.nvchad = {
-  #   enable = true;
-  #   backup = false;
-  #   chadrcConfig = "
-  #     local M = {}
-  #     M.nvdash = { load_on_startup = true }
-  #     return M
-  #   ";
-  # };
-imports = [
+  programs = {
+    home-manager.enable = true;
+  };
+  
+  imports = [
     ./modules/nvchad.nix
     inputs.nvchad4nix.homeManagerModule
   ];
