@@ -4,7 +4,7 @@
   home = {
     username = "nixy";
     homeDirectory = "/home/nixy";
-    stateVersion = "24.11"; # Please read the comment before changing.
+    stateVersion = "24.11";
     packages = with pkgs; [];
     file = {};
   };
