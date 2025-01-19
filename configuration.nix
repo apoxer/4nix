@@ -9,13 +9,13 @@
 
   boot = {
     loader = {
-      # systemd-boot.enable = true;
+      systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
-      grub = {
-        enable = true;
-        device = "nodev";
+     # grub = {
+        #enable = true;
+       # device = "nodev";
         efiSupport = true;
-      };
+      #};
     };
   };
 
