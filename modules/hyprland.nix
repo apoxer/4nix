@@ -3,10 +3,9 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     systemd.enable = false;
     extraConfig = "
-       decoration:blur:enabled = false
+decoration:blur:enabled = false
 decoration:shadow:enabled = false
 
 monitor=,preferred,auto,1
