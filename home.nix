@@ -31,12 +31,9 @@
     mpv.enable = true;
   };
 
-  gtk = {
-    enable = true;
-    iconTheme = {
-      package = pkgs.adwaita-icon-theme;
-      name = "Adwaita";
-    };
+  gtk.iconTheme = {
+    package = pkgs.adwaita-icon-theme;
+    name = "Adwaita";
   };
   
   imports = [
