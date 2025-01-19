@@ -14,8 +14,12 @@
       udiskie
       ventoy-full
       clipse
-      popsicle
+      emote
       nautilus
+      pavucontrol
+      eog
+      grimblast
+      telegram-desktop
     ];
     file = {};
   };
@@ -27,6 +31,7 @@
     bat.enable = true;
     lsd.enable = true;
     fastfetch.enable = true;
+    mpv.enable = true;
   };
   
   imports = [
