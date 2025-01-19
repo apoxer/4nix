@@ -9,10 +9,8 @@
       brave
       hyprpanel
       brightnessctl
-      clipse
       wl-clipboard
       udiskie
-      ventoy-full
       clipse
       emote
       nautilus
