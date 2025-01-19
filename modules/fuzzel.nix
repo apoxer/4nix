@@ -6,6 +6,8 @@
     settings = {
       main = {
         icon-theme = "Adwaita";
+        terminal = "kitty";
+        use-bold = "yes";
       };
       border = {
         width = 2;
