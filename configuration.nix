@@ -4,10 +4,10 @@
   imports = [ 
     ./hardware-configuration.nix
     ./modules/stylix.nix
+    ./modules/fish.nix
   ];
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
     loader = {
       # systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
@@ -53,35 +53,9 @@
     packages = with pkgs; [];
   };
 
-  environment.systemPackages = with pkgs; [
-    kitty
-    brave
-    brightnessctl
-    lsd
-    bat
-    fuzzel
-    clipse
-    fastfetch
-    wl-clipboard
-    udiskie
-    ventoy-full
-    clipse
-  ];
+  environment.systemPackages = with pkgs; [];
 
   programs = {
-    git.enable = true;
-    neovim.enable = true;
-    fish = {
-      enable = true;
-      shellInit = "
-        if uwsm check may-start
-          exec uwsm start hyprland-uwsm.desktop
-        end
-        set -U fish_greeting
-        fish_config prompt choose scales
-      ";
-    };
-    yazi.enable = true;
     hyprland = {
       enable = true;
       withUWSM  = true;
@@ -92,13 +66,14 @@
 
   services = {
     udisks2.enable = true;
+    upower.enable = true;
   };
 
   users.defaultUserShell = pkgs.fish;
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
     substituters = ["https://hyprland.cachix.org"];
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };

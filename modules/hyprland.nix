@@ -178,8 +178,8 @@ windowrulev2 = float, class:(org.pulseaudio.pavucontrol)
 windowrulev2 = size 952 500, class:(org.pulseaudio.pavucontrol)
 windowrulev2 = float, class:(blueman-manager)
 windowrulev2 = size 826 450, class:(blueman-manager)
-windowrulev2 = float, class:(brave)
-windowrulev2 = size 1143 668, class:(brave)
+windowrulev2 = float, class:(xdg-desktop-portal-gtk)
+# windowrulev2 = size 1143 668, class:(
 
 # layerrule = blur, bar-0
 # layerrule = blur, bar-1
