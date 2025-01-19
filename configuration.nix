@@ -3,8 +3,8 @@
 {
   imports = [ 
     ./hardware-configuration.nix
-    ./modules/stylix.nix
-    ./modules/fish.nix
+    ./modules/+fish.nix
+    ./modules/+stylix.nix
   ];
 
   boot = {

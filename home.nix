@@ -29,10 +29,10 @@
   };
   
   imports = [
-    ./modules/nvchad.nix
     inputs.nvchad4nix.homeManagerModule
-    ./modules/hyprpanel.nix
     inputs.hyprpanel.homeManagerModules.hyprpanel
+    ./modules/nvchad.nix
+    ./modules/hyprpanel.nix
     ./modules/hyprland.nix
     ./modules/kitty.nix
     ./modules/git.nix
