@@ -10,5 +10,11 @@
       set -U fish_greeting
       fish_config prompt choose scales
     ";
+    shellAliases = {
+      "ls" = "lsd";
+      "cat" = "bat";
+      "h" = "~/4nix/scripts/h.sh";
+      "e" = "~/4nix/scripts/e.sh";
+    };
   };
 }

@@ -288,21 +288,19 @@
     "hyprpanel": {
       "inputs": {
         "ags": "ags",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
         "lastModified": 1737011541,
         "narHash": "sha256-YAT1VozLQ29V56EvEzJQswBOCLZDqn/gTU05mf+UFts=",
-        "owner": "jas-singhfsu",
-        "repo": "hyprpanel",
+        "owner": "Jas-SinghFSU",
+        "repo": "HyprPanel",
         "rev": "88609f7e4c244326face34cb992a79053f2c7810",
         "type": "github"
       },
       "original": {
-        "owner": "jas-singhfsu",
-        "repo": "hyprpanel",
+        "owner": "Jas-SinghFSU",
+        "repo": "HyprPanel",
         "type": "github"
       }
     },
@@ -323,6 +321,22 @@
       }
     },
     "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1737062831,
+        "narHash": "sha256-Tbk1MZbtV2s5aG+iM99U8FqwxU/YNArMcWAv6clcsBc=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "5df43628fdf08d642be8ba5b3625a6c70731c19c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1736798957,
         "narHash": "sha256-qwpCtZhSsSNQtK4xYGzMiyEDhkNzOCz/Vfu4oL2ETsQ=",
@@ -380,7 +394,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "hyprpanel": "hyprpanel",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "nvchad4nix": "nvchad4nix",
         "stylix": "stylix"
       }
@@ -397,7 +411,7 @@
         "git-hooks": "git-hooks",
         "gnome-shell": "gnome-shell",
         "home-manager": "home-manager_2",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "systems": "systems",
         "tinted-foot": "tinted-foot",
         "tinted-kitty": "tinted-kitty",

@@ -7,6 +7,7 @@
     stateVersion = "24.11";
     packages = with pkgs; [
       brave
+      hyprpanel
       brightnessctl
       clipse
       wl-clipboard
@@ -30,9 +31,7 @@
   
   imports = [
     inputs.nvchad4nix.homeManagerModule
-    inputs.hyprpanel.homeManagerModules.hyprpanel
     ./modules/nvchad.nix
-    ./modules/hyprpanel.nix
     ./modules/hyprland.nix
     ./modules/kitty.nix
     ./modules/git.nix
