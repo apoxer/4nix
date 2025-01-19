@@ -25,11 +25,18 @@
   programs = {
     home-manager.enable = true;
     yazi.enable = true;
-    fuzzel.enable = true;
     bat.enable = true;
     lsd.enable = true;
     fastfetch.enable = true;
     mpv.enable = true;
+  };
+
+  gtk = {
+    # enable = true;
+    iconTheme = {
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+    };
   };
   
   imports = [
@@ -38,5 +45,6 @@
     ./modules/hyprland.nix
     ./modules/kitty.nix
     ./modules/git.nix
+    ./modules/fuzzel.nix
   ];
 }
