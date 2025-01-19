@@ -6,13 +6,16 @@
     ./modules/stylix.nix
   ];
 
-  boot.loader = {
-    # systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-    grub = {
-      enable = true;
-      device = "nodev";
-      efiSupport = true;
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+      # grub = {
+      #   enable = true;
+      #   device = "nodev";
+      #   efiSupport = true;
+      # };
     };
   };
 
@@ -80,6 +83,8 @@
     hyprland = {
       enable = true;
       withUWSM  = true;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
   };
 
@@ -90,6 +95,11 @@
   users.defaultUserShell = pkgs.fish;
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nix.settings = {
+    substituters = ["https://hyprland.cachix.org"];
+    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+  };
   
   system.stateVersion = "24.11";
 

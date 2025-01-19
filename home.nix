@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, lib, ... }:
 
 {
   home = {
@@ -11,6 +11,7 @@
   
   programs = {
     home-manager.enable = true;
+    fish.enable = true;
   };
   
   imports = [
@@ -18,6 +19,6 @@
     inputs.nvchad4nix.homeManagerModule
     ./modules/hyprpanel.nix
     inputs.hyprpanel.homeManagerModules.hyprpanel
-    ./modules/hyprland.nix
+    ./modules/land.nix
   ];
 }
